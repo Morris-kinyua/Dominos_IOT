@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_company_form_iot_device" model="ir.ui.view">
+            <field name="name">res.company.form.iot.device</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Fiscal Device">
+                        <group>
+                            <field name="iot_device_id"/>
+                            <button name="action_send_to_fiscal_device" type="object" 
+                                    string="Send to Fiscal Device" class="oe_highlight"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_iot_device_selector_form" model="ir.ui.view">
+            <field name="name">iot.device.selector.form</field>
+            <field name="model">iot.device.selector</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="company_id" readonly="1"/>
+                        <field name="available_devices" invisible="1"/>
+                        <field name="device_id"/>
+                    </group>
+                    <footer>
+                        <button name="action_confirm_device" type="object" 
+                                string="Confirm" class="oe_highlight"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
