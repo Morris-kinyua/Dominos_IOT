@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_iot_device_form_company" model="ir.ui.view">
+        <field name="name">iot.device.form.company</field>
+        <field name="model">iot.device</field>
+        <field name="inherit_id" ref="iot.iot_device_view_form"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="company_id" options="{'no_create': True}"/>
+            </field>
+        </field>
+    </record>
+</odoo>
