@@ -7,6 +7,7 @@ class IotDevice(models.Model):
     company_id = fields.Many2one(
         'res.company',
         string='Company',
+        store=True,
         help='Company this device is assigned to'
     )
     device_name = fields.Char(

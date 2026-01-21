@@ -7,6 +7,7 @@
     'depends': ['iot', 'l10n_ke_etims_vscu'],
     'data': [
         'views/res_company_views.xml',
+        'views/iot_device_views.xml',
     ],
     'installable': True,
     'auto_install': False,
